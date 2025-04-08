@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website with Tailwind CSS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="w-full min-h-screen bg-[url('images/sky.jpg')] bg-center bg-cover px-6 sm:px-10 lg:px-28 py-5 relative bg-cyan-900 bg-opacity-70">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center">
+            <div class="text-white text-xl font-bold uppercase">
+                Wonderer's <br> Travel
+            </div>
+            <button class="block sm:hidden text-white focus:outline-none" onclick="toggleMenu()">
+                <!-- Hamburger Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <ul class="hidden sm:flex space-x-4 text-right" id="mobileMenu">
+                <li><a href="#" class="text-black font-bold after:block after:h-[2px] after:w-full after:bg-cyan-600 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Travel</a></li>
+                <li><a href="#" class="text-black font-bold after:block after:h-[2px] after:w-full after:bg-cyan-600 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Places to Visit</a></li>
+                <li><a href="#" class="text-black font-bold after:block after:h-[2px] after:w-full after:bg-cyan-600 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Contact</a></li>
+                <li>
+                    <a href="#" class="bg-cyan-600 flex items-center gap-2 py-2 px-4 text-sm sm:py-3 sm:px-6 font-medium rounded-lg hover:bg-transparent hover:border-cyan-600 hover:text-white duration-300 hover:border border border-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M21.5 10.5h-7l-4-8H7l3.5 8h-4l-2-4H2l2.5 5.5L2 17h2l2-3h4l-3.5 8h3.5l4-8h7v-3z" />
+                        </svg>
+                        Booking
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Mobile Menu -->
+        <ul class="hidden flex-col space-y-4 bg-white p-4 rounded-lg shadow-lg sm:hidden" id="mobileMenu">
+            <li><a href="#" class="text-black font-bold">Travel</a></li>
+            <li><a href="#" class="text-black font-bold">Places to Visit</a></li>
+            <li><a href="#" class="text-black font-bold">Contact</a></li>
+            <li>
+                <a href="#" class="bg-cyan-600 flex items-center gap-2 py-2 px-4 text-sm font-medium rounded-lg hover:bg-transparent hover:border-cyan-600 hover:text-cyan-600 duration-300 hover:border border border-transparent">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21.5 10.5h-7l-4-8H7l3.5 8h-4l-2-4H2l2.5 5.5L2 17h2l2-3h4l-3.5 8h3.5l4-8h7v-3z" />
+                    </svg>
+                    Booking
+                </a>
+            </li>
+        </ul>
+        <!-- Main Content -->
+        <div class="text-black mt-12 lg:mt-48 max-w-lg sm:max-w-xl">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-semibold leading-snug sm:leading-normal">Travel to Places <br> that You Want to See</h1>
+            <p class="mt-4 text-sm sm:text-base">Discover breathtaking destinations, hidden gems, and unforgettable experiences with <span class="text-cyan-500 font-bold uppercase drop-shadow-[2px_2px_0px_black]">Wonder's Travel</span>. Whether you're planning a weekend getaway or a once-in-a-lifetime adventure, we bring you expert travel guides, insider tips, and exclusive deals to make your journey seamless.</p>
+            <div class="mt-6">
+                <div class="flex flex-wrap items-center bg-white rounded-lg border border-gray-300 shadow-md">
+                    <input type="text" placeholder="Country Name" class="flex-grow px-4 py-2 text-sm sm:text-base outline-none text-gray-700 placeholder-gray-400">
+                    <button class="bg-cyan-500 text-white px-4 py-2 text-sm sm:text-base font-medium hover:bg-cyan-600">Search</button>
+                </div>
+            </div>
+        </div>
+        <!-- Image -->
+        <img src="images/plane.png" class="w-full sm:w-3/4 lg:w-1/2 lg:absolute bottom-20 right-10 scale-x-[-1]" alt="Mirrored Image">
+    </div>
+</body>
+</html>
